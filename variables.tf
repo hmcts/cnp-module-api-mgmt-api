@@ -19,6 +19,8 @@ variable "protocols" {
   default = ["https"]
 }
 
+variable "service_url" {}
+
 
 variable "name" {}
 variable "path" {}
