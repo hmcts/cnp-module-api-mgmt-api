@@ -8,7 +8,7 @@
 | name | Name of the API | string | n/a |
 | path | Path of the API, e.g. /payments-api | string | n/a |
 | product\_id | The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created. | string | n/a |
-| protocols |  | list | `<list>` |
+| protocols | supported protocols for the API, default is https only | list | `<list>` |
 | revision | The Revision which is used for this API. | string | n/a |
 | service\_url | The backend url that API management will point to, e.g. http://rpe-draft-store-aat.service.core-compute-aat.internal | string | n/a |
 | swagger\_url | Must be openapi v2, blocked on https://github.com/terraform-providers/terraform-provider-azurerm/issues/3203 | string | n/a |
