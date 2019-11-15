@@ -24,7 +24,7 @@ variable "protocols" {
 }
 
 variable "service_url" {
-  description = "The backend url that API management will point to, e.g. http://$${var.product}-$${var.component}-$${var.env}.service.core-compute-$${var.env}.internal"
+  description = "The backend url that API management will point to, e.g. http://rpe-draft-store-aat.service.core-compute-aat.internal"
 }
 
 variable "name" {
