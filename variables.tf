@@ -19,7 +19,7 @@ variable "swagger_url" {
 }
 
 variable "protocols" {
-  type        = "list"
+  type        = list
   description = "supported protocols for the API, default is https only"
   default     = ["https"]
 }
