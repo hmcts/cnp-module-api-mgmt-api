@@ -9,7 +9,7 @@ resource "azurerm_api_management_api" "api" {
   service_url         = "${var.service_url}"
 
   import {
-    content_format = "swagger-link-json"
+    content_format = var.content_format
     content_value  = "${var.swagger_url}"
   }
 }

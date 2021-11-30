@@ -15,7 +15,8 @@ A terraform module for creating an API in API mgmt
 | protocols | supported protocols for the API, default is https only | list | `<list>` |
 | revision | The Revision which is used for this API. | string | n/a |
 | service\_url | The backend url that API management will point to, e.g. http://rpe-draft-store-aat.service.core-compute-aat.internal | string | n/a |
-| swagger\_url | Must be openapi v2, blocked on https://github.com/terraform-providers/terraform-provider-azurerm/issues/3203 | string | n/a |
+| swagger\_url | URL to the Swagger or Open API Spec | string | n/a |
+| content\_format | Format of the swagger_url. See for validate values https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/api_management_api#content_format | string | n/a |
 
 ## Outputs
 
