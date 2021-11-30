@@ -1,0 +1,6 @@
+
+## Ignore Terraform
+.terraform
+.idea/
+*terraform.lock.hcl
+**/**/override.tf
