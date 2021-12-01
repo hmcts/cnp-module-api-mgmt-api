@@ -15,11 +15,19 @@ variable "revision" {
 }
 
 variable "swagger_url" {
-  description = "Must be openapi v2, blocked on https://github.com/terraform-providers/terraform-provider-azurerm/issues/3203"
+  description = "URL to the Swagger or Open API Spec"
+}
+variable "content_format" {
+  default     = "swagger-link-json"
+  description = "Format of the swagger_url"
+  validation {
+    condition     = contains(["openapi", "openapi+json", "openapi+json-link", "openapi-link", "swagger-json", "swagger-link-json", "wadl-link-json", "wadl-xml", "wsdl", "wsdl-link"], var.content_format)
+    error_message = "Content Format possible values are openapi, openapi+json, openapi+json-link, openapi-link, swagger-json, swagger-link-json, wadl-link-json, wadl-xml, wsdl and wsdl-link."
+  }
 }
 
 variable "protocols" {
-  type        = list
+  type        = list(any)
   description = "supported protocols for the API, default is https only"
   default     = ["https"]
 }
