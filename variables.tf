@@ -45,3 +45,9 @@ variable "path" {
 variable "display_name" {
   description = "Display name for the API, e.g. Payments API"
 }
+
+variable "subscription_required" {
+  type        = bool
+  description = "Is an Subscription Key Required? (Default: true)"
+  default     = true
+}
