@@ -45,7 +45,7 @@ variable "path" {
 }
 
 variable "api_type" {
-  description = "Type of API",
+  description = "Type of API"
   default     = "http"
 }
 
