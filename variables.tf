@@ -39,9 +39,16 @@ variable "service_url" {
 variable "name" {
   description = "Name of the API"
 }
+
 variable "path" {
   description = "Path of the API, e.g. /payments-api"
 }
+
+variable "api_type" {
+  description = "Type of API",
+  default     = "http"
+}
+
 variable "display_name" {
   description = "Display name for the API, e.g. Payments API"
 }
