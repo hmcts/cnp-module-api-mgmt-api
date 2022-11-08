@@ -32,7 +32,7 @@ No modules.
 | <a name="input_content_format"></a> [content\_format](#input\_content\_format) | Format of the swagger\_url | `string` | `"swagger-link-json"` | no |
 | <a name="input_display_name"></a> [display\_name](#input\_display\_name) | Display name for the API, e.g. Payments API | `any` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name of the API | `any` | n/a | yes |
-| <a name="input_api_type"></a> [api_type](#input\_api\_type) | Type of API | `any` | `http` | no |
+| <a name="input_api_type"></a> [api_type](#input\_api\_type) | Type of API | `any` | `"http"` | no |
 | <a name="input_path"></a> [path](#input\_path) | Path of the API, e.g. /payments-api | `any` | n/a | yes |
 | <a name="input_product_id"></a> [product\_id](#input\_product\_id) | The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created. | `any` | n/a | yes |
 | <a name="input_protocols"></a> [protocols](#input\_protocols) | supported protocols for the API, default is https only | `list(any)` | <pre>[<br>  "https"<br>]</pre> | no |
