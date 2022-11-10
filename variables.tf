@@ -47,6 +47,10 @@ variable "path" {
 variable "api_type" {
   description = "Type of API"
   default     = "http"
+  validation {
+    condition     = contains(["graphql", "http", "soap", "websocket"], var.api_type)
+    error_message = "API Type possible values are graphql, http, soap and websocket."
+  }
 }
 
 variable "display_name" {
