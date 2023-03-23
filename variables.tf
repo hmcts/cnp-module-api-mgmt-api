@@ -42,6 +42,16 @@ variable "name" {
 variable "path" {
   description = "Path of the API, e.g. /payments-api"
 }
+
+variable "api_type" {
+  description = "Type of API"
+  default     = "http"
+  validation {
+    condition     = contains(["graphql", "http", "soap", "websocket"], var.api_type)
+    error_message = "API Type possible values are graphql, http, soap and websocket."
+  }
+}
+
 variable "display_name" {
   description = "Display name for the API, e.g. Payments API"
 }
@@ -50,4 +60,12 @@ variable "subscription_required" {
   type        = bool
   description = "Is an Subscription Key Required? (Default: true)"
   default     = true
+}
+
+variable "wsdl_service_name" {
+  description = "Name of WSDL service"
+}
+
+variable "wsdl_endpoint_name" {
+  description = "Name of WSDL endpoint"
 }
