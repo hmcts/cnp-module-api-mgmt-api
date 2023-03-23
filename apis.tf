@@ -13,10 +13,10 @@ resource "azurerm_api_management_api" "api" {
   import {
     content_format = var.content_format
     content_value  = var.swagger_url
-  }
 
-  wsdl_selector {
-    service_name  = var.wsdl_service_name
-    endpoint_name = var.wsdl_endpoint_name
+    wsdl_selector {
+      service_name  = var.wsdl_service_name
+      endpoint_name = var.wsdl_endpoint_name
+    }
   }
 }
