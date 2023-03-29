@@ -8,6 +8,7 @@ resource "azurerm_api_management_api" "api" {
   protocols             = var.protocols
   service_url           = var.service_url
   subscription_required = var.subscription_required
+  api_type              = var.api_type
 
   import {
     content_format = var.content_format
