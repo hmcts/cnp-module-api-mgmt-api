@@ -51,3 +51,8 @@ variable "subscription_required" {
   description = "Is an Subscription Key Required? (Default: true)"
   default     = true
 }
+
+variable "api_type" {
+  description = "Type of API. Possible values are graphql, http, soap, and websocket. (Default: http)"
+  default     = "http"
+}

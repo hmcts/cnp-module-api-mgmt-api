@@ -39,6 +39,7 @@ No modules.
 | <a name="input_service_url"></a> [service\_url](#input\_service\_url) | The backend url that API management will point to, e.g. http://rpe-draft-store-aat.service.core-compute-aat.internal | `any` | n/a | yes |
 | <a name="input_subscription_required"></a> [subscription\_required](#input\_subscription\_required) | Is an Subscription Key Required? (Default: true) | `bool` | `true` | no |
 | <a name="input_swagger_url"></a> [swagger\_url](#input\_swagger\_url) | URL to the Swagger or Open API Spec | `any` | n/a | yes |
+| <a name="input_api_type"></a> [api\_type](#input\_api\_type) | Type of API. Possible values are graphql, http, soap, and websocket. (Default: http) | `string` | `"http"` | no |
 
 ## Outputs
 
