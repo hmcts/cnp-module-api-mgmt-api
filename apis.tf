@@ -4,6 +4,7 @@ resource "azurerm_api_management_api" "api" {
   api_management_name   = var.api_mgmt_name
   revision              = var.revision
   display_name          = var.display_name
+  api_type              = var.api_type
   path                  = var.path
   protocols             = var.protocols
   service_url           = var.service_url
