@@ -10,9 +10,11 @@ resource "azurerm_api_management_api" "api" {
   subscription_required = var.subscription_required
   api_type              = var.api_type
 
-  import {
-    count          = var.swagger_url != "" ? [1] : []
-    content_format = var.content_format
-    content_value  = var.swagger_url
+  dynamic "import" {
+    for_each = var.swagger_url != null ? [1] : []
+    content {
+      content_format = var.content_format
+      content_value  = var.swagger_url
+    }
   }
 }
