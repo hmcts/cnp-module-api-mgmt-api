@@ -46,6 +46,19 @@ variable "display_name" {
   description = "Display name for the API, e.g. Payments API"
 }
 
+variable "api_description" {
+  description = <<-EOT
+    Description for the API, shown on the developer portal's API page. Null leaves it unset,
+    which is what every caller got before this existed.
+
+    The import block below fills this in from the specification when the API is created, and only
+    then - the provider writes the resource's own attributes on every later apply, so an API
+    created once and applied again loses the imported text unless it is passed here. Callers that
+    already read the specification can pass info.description straight through.
+  EOT
+  default     = null
+}
+
 variable "subscription_required" {
   type        = bool
   description = "Is an Subscription Key Required? (Default: true)"
